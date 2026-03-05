@@ -164,6 +164,7 @@ export default function Home() {
             variants={fadeUpVariant}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
+            onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
             className="mt-10 px-10 py-4 cursor-pointer bg-sunsetOrange text-black font-bold rounded-full shadow-[0_0_20px_rgba(255,170,51,0.4)] transition-colors"
           >
             Enter the Experience
@@ -422,20 +423,18 @@ export default function Home() {
           </div>
           
           <div>
-            <h4 className="text-lg font-semibold text-white mb-6">Discover</h4>
+            <h4 className="text-lg font-semibold text-white mb-6">Explore</h4>
             <ul className="space-y-4">
-              <li><a href="#destinations" className="text-gray-400 hover:text-goldenYellow transition-colors">Destinations</a></li>
-              <li><a href="#technology" className="text-gray-400 hover:text-goldenYellow transition-colors">The Technology</a></li>
-              <li><a href="#about" className="text-gray-400 hover:text-goldenYellow transition-colors">Our Story</a></li>
+              <li><a href="#home" className="text-gray-400 hover:text-goldenYellow transition-colors">Home</a></li>
+              <li><a href="#about" className="text-gray-400 hover:text-goldenYellow transition-colors">What We Do</a></li>
+              <li><a href="#features" className="text-gray-400 hover:text-goldenYellow transition-colors">Core Features</a></li>
             </ul>
           </div>
 
           <div>
             <h4 className="text-lg font-semibold text-white mb-6">Connect</h4>
             <ul className="space-y-4">
-              <li><a href="#help" className="text-gray-400 hover:text-goldenYellow transition-colors">Book a Session</a></li>
-              <li><a href="#partnerships" className="text-gray-400 hover:text-goldenYellow transition-colors">Partner With Us</a></li>
-              <li><a href="#careers" className="text-gray-400 hover:text-goldenYellow transition-colors">Careers</a></li>
+              <li><a href="#contact" className="text-gray-400 hover:text-goldenYellow transition-colors">Book a Session</a></li>
             </ul>
           </div>
         </div>
