@@ -116,8 +116,17 @@ export default function Home() {
       {/* ================= HERO ================= */}
       <section id="home" className="relative h-screen flex items-center justify-center text-center overflow-hidden">
         {/* Video Placeholder */}
-        <video autoPlay loop muted playsInline id="vid" className="absolute w-full h-full object-cover z-0">
-          <source src="/videos/new_hero.mp4" type="video/mp4" />
+        <video 
+          autoPlay 
+          loop 
+          muted 
+          playsInline 
+          poster="/videos/hero_poster.jpg"
+          preload="auto"
+          id="vid" 
+          className="absolute w-full h-full object-cover z-0"
+        >
+          <source src="/videos/hero_optimized.mp4" type="video/mp4" />
         </video>
 
         {/* Overlay */}
