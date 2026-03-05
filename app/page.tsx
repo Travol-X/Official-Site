@@ -256,28 +256,28 @@ export default function Home() {
       </section>
 
       {/* ================= FEATURES ================= */}
-      <section id="features" className="min-h-screen px-10 py-32 bg-deepDark">
+      <section id="features" className="min-h-screen px-10 py-16 bg-deepDark flex flex-col justify-center items-center">
         <motion.div 
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
           variants={staggerContainer}
-          className="max-w-7xl mx-auto"
+          className="max-w-7xl mx-auto w-full"
         >
           <motion.h2 
             variants={fadeUpVariant}
-            className="text-4xl font-bold text-softViolet mb-16 text-center"
+            className="text-4xl font-bold text-softViolet mb-8 text-center"
           >
             Core Immersive Features
           </motion.h2>
 
-          <div className="grid md:grid-cols-3 gap-10">
+          <div className="grid md:grid-cols-3 gap-6">
             <motion.div 
               variants={fadeUpVariant}
               whileHover={{ y: -10 }}
               className="bg-black/50 border border-sunsetOrange rounded-2xl transition-colors overflow-hidden group"
             >
-              <div className="relative h-64 w-full">
+              <div className="relative h-48 w-full">
                 <Image 
                   src="/images/immersive_projection.png" 
                   alt="360 Projection Mapping" 
@@ -285,9 +285,9 @@ export default function Home() {
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
-              <div className="p-8">
-                <h3 className="text-2xl font-bold text-sunsetOrange mb-4">360° Projection Mapping</h3>
-                <p className="text-gray-400 leading-relaxed">
+              <div className="p-6">
+                <h3 className="text-xl font-bold text-sunsetOrange mb-3">360° Projection Mapping</h3>
+                <p className="text-gray-400 leading-relaxed text-sm">
                   Our core technology involves stitching ultra-high-resolution digital environments seamlessly across all four walls of our physical chambers. This erases the boundary of the room, fully engulfing you in expansive, photorealistic landscapes ranging from alien bioluminescent forests to the bustling streets of Tokyo. No headsets required.
                 </p>
               </div>
@@ -298,7 +298,7 @@ export default function Home() {
               whileHover={{ y: -10 }}
               className="bg-black/50 border border-goldenYellow rounded-2xl transition-colors overflow-hidden group"
             >
-              <div className="relative h-64 w-full">
+              <div className="relative h-48 w-full">
                 <Image 
                   src="/images/spatial_audio.png" 
                   alt="Spatial Audio System" 
@@ -306,9 +306,9 @@ export default function Home() {
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
-              <div className="p-8">
-                <h3 className="text-2xl font-bold text-goldenYellow mb-4">Omnidirectional Audio</h3>
-                <p className="text-gray-400 leading-relaxed">
+              <div className="p-6">
+                <h3 className="text-xl font-bold text-goldenYellow mb-3">Omnidirectional Audio</h3>
+                <p className="text-gray-400 leading-relaxed text-sm">
                   Sight is only half the experience. We deploy a state-of-the-art 32-channel spatial audio array hidden seamlessly within the chamber walls and ceiling. Sound frequencies are mapped dynamically, meaning you can precisely locate the rustle of leaves behind you or the distant rumble of thunder echoing across the virtual valley.
                 </p>
               </div>
@@ -319,7 +319,7 @@ export default function Home() {
               whileHover={{ y: -10 }}
               className="bg-black/50 border border-softViolet rounded-2xl transition-colors overflow-hidden group"
             >
-              <div className="relative h-64 w-full">
+              <div className="relative h-48 w-full">
                 <Image 
                   src="/images/environmental_effects.png" 
                   alt="Physical Environmental Effects" 
@@ -327,9 +327,9 @@ export default function Home() {
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
-              <div className="p-8">
-                <h3 className="text-2xl font-bold text-softViolet mb-4">Tactile Atmospherics</h3>
-                <p className="text-gray-400 leading-relaxed">
+              <div className="p-6">
+                <h3 className="text-xl font-bold text-softViolet mb-3">Tactile Atmospherics</h3>
+                <p className="text-gray-400 leading-relaxed text-sm">
                   Bridge the gap between digital and physical with synchronized environmental stimulation. As you step onto a virtual snowy peak, the room temperature drops and physical wind generators simulate the mountain breeze. Physical mist and fog effects roll across the real floor, directly syncing with the climate of your chosen destination.
                 </p>
               </div>
