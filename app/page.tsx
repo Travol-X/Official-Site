@@ -30,9 +30,17 @@ export default function Home() {
   // Force video playback on mount (Fixes Vercel/Production autoplay issues)
   useEffect(() => {
     if (videoRef.current) {
-      videoRef.current.play().catch(error => {
-        console.error("Autoplay was prevented:", error);
-      });
+      const playVideo = async () => {
+        try {
+          await videoRef.current?.play();
+        } catch (error: any) {
+          // AbortError is common in low-power modes or if the video is paused/interrupted
+          if (error.name !== "AbortError") {
+            console.error("Autoplay was prevented:", error);
+          }
+        }
+      };
+      playVideo();
     }
   }, []);
 
