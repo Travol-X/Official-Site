@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import Head from "next/head";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -25,6 +25,16 @@ export default function Home() {
   const [isDeleting, setIsDeleting] = useState(false);
   const [testimonyIndex, setTestimonyIndex] = useState(0);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  // Force video playback on mount (Fixes Vercel/Production autoplay issues)
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.play().catch(error => {
+        console.error("Autoplay was prevented:", error);
+      });
+    }
+  }, []);
 
   const handleContactSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -117,6 +127,7 @@ export default function Home() {
       <section id="home" className="relative h-screen flex items-center justify-center text-center overflow-hidden">
         {/* Video Placeholder */}
         <video 
+          ref={videoRef}
           autoPlay 
           loop 
           muted 
